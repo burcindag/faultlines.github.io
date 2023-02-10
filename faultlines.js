@@ -6,6 +6,7 @@ function initMap() {
     zoom: 6,
   });
 
+/*
   // Load the fault line data - USGS bad data
   var faultLines = [
     // North Anatolian Fault
@@ -28,6 +29,15 @@ function initMap() {
     { lat: 35.51, lng: 33.98 },
     { lat: 36.08, lng: 34.59 },
   ];
+  */
+  // MTA data
+    var faultLines = [
+		{ lat: 36.252565 ,lng: 36.254883},
+		{ lat: 37.317395 ,lng: 36.958008},
+		{ lat: 37.839671 ,lng: 38.045654},
+		{ lat: 38.410186 ,lng: 41.033936},
+		{ lat: 38.933506 ,lng: 42.648926},
+    ];
   
   // Style the fault lines
   var faultLinePath = [];
