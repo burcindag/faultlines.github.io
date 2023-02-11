@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe id="myFrame" src="https://www.remax.com.tr/portfoy/P53425705" style="height:380px;width:100%"></iframe>
+
+<p>Click the "Tryit" button to hide the first H1 element in the iframe (another document).</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+const iframe = document.getElementById("myFrame");
+const iWindow = iframe.contentWindow;
+const iDocument = iWindow.document;
+
+// accessing the element
+const myElement = iDocument.getElementsByTagName("h1")[0];
+/*
+  var iframe = document.getElementById("myFrame");
+  var elmnt = iframe.contentWindow.document.getElementsByTagName("H1")[0];
+  elmnt.style.display = "none";*/
+  myElement.style.color = "green";
+}
+</script>
+
+.contentDocument.getElementsByTagName("H3");
+
+.contentWindow.document.getElementsByTagName("H3")[0];
+
+</body>
+</html>
