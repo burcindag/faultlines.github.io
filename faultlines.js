@@ -35,7 +35,7 @@ function initMap() {
   drawLine(0);
 
 
-  var url = "https://burcindagistan.com/faultlines.github.io/grid.kml";
+  var url = "https://burcindagistan.com/faultlines.github.io/data/grid.kml";
   
   var gridLayer = new google.maps.KmlLayer(
   {
