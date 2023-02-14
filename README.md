@@ -1,2 +1,2 @@
 # faultlines.github.io
-Faultl ines of Türkiye
+Fault Lines in Turkey
