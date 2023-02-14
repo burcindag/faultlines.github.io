@@ -6,7 +6,7 @@ function initMap() {
     center: { lat: 38.9637, lng: 35.2433 },
   });
 
-    var url = "https://burcindagistan.com/faultlines.github.io/data/faylar.kml";
+    var url = "https://burcindagistan.com/faultlines.github.io/data/faultlines.kml";
   
     var faultlinesLayer = new google.maps.KmlLayer(
     {
