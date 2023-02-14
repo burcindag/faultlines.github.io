@@ -8,7 +8,7 @@ function initMap() {
 
     var url = "https://burcindagistan.com/faultlines.github.io/data/faylar.kml";
   
-    var gridLayer = new google.maps.KmlLayer(
+    var faultlinesLayer = new google.maps.KmlLayer(
     {
        url: url,
        suppressInfoWindows: true,  
