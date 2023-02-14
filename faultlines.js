@@ -34,7 +34,7 @@ function initMap() {
 
   drawLine(0);
 
-  
+  /*
   var url = "https://burcindagistan.com/faultlines.github.io/grid.kml";
   
   var gridLayer = new google.maps.KmlLayer(
@@ -45,16 +45,16 @@ function initMap() {
      zindex: 0,
      clickable : false
   });
-  
+  */
   // fay hatları
-  var url2 = "https://burcindagistan.com/faultlines.github.io/faults_kml.kml";
+  var urlF = "https://burcindagistan.com/faultlines.github.io/faults_kml.kml";
   
   var faultlinesLayer = new google.maps.KmlLayer(
   {
-     url: url2,
+     url: urlF,
      suppressInfoWindows: true,  
      map:map,
-     zindex: 1,
+     zindex: 0,
      clickable : false
   });
   
