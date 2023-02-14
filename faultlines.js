@@ -1,7 +1,25 @@
 
 var map;
-var lines = [
-];
+
+// Read fault line coordinates from file
+var lines = [];
+fetch('faults.txt')
+  .then(response => response.text())
+  .then(text => {
+    var linesArray = text.split('\n');
+    for (var i = 0; i < linesArray.length; i++) {
+      var line = linesArray[i].split(',');
+      var lineCoordinates = [];
+      for (var j = 0; j < line.length; j++) {
+        var latLng = line[j].split(' ');
+        lineCoordinates.push({ lat: parseFloat(latLng[0]), lng: parseFloat(latLng[1]) });
+      }
+      lines.push(lineCoordinates);
+    }
+
+    // Initialize the map and draw fault lines
+    initMap();
+  });
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
