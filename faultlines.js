@@ -48,17 +48,15 @@ function initMap() {
   
   
   // fay hatları
-  /*
-  var urlF = "https://burcindagistan.com/faultlines.github.io/faults.kml";
+  var urlF = "https://burcindagistan.com/faultlines.github.io/data/faults.kml";
   
   var faultlinesLayer = new google.maps.KmlLayer(
   {
      url: urlF,
      suppressInfoWindows: true,  
      map:map,
-     zindex: 0,
+     zindex: 2,
      clickable : false
   });
-  */
 }
 
