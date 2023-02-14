@@ -6,16 +6,7 @@ var lines = [];
 fetch('faults.txt')
   .then(response => response.text())
   .then(text => {
-    var linesArray = text.split('\n');
-    for (var i = 0; i < linesArray.length; i++) {
-      var line = linesArray[i].split(',');
-      var lineCoordinates = [];
-      for (var j = 0; j < line.length; j++) {
-        var latLng = line[j].split(' ');
-        lineCoordinates.push({ lat: parseFloat(latLng[0]), lng: parseFloat(latLng[1]) });
-      }
-      lines.push(lineCoordinates);
-    }
+    var lines = text.split('\n');
 
     // Initialize the map and draw fault lines
     initMap();
