@@ -64,7 +64,7 @@ function initMap() {
      clickable : false
   });
   
-  
+  /*
   // fay hatları
   var urlF = "https://burcindagistan.com/faultlines.github.io/data/faults.kml";
   
@@ -75,6 +75,6 @@ function initMap() {
      map:map,
      zindex: 2,
      clickable : false
-  });
+  });*/
 }
 
