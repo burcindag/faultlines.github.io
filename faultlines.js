@@ -5,7 +5,7 @@ function initMap() {
     zoom: 7,
     center: { lat: 38.9637, lng: 35.2433 },
   });
-
+/*
   // Load fault line coordinates directly from text file
   fetch('faults.txt')
     .then(response => response.text())
@@ -23,7 +23,7 @@ function initMap() {
         line.setMap(map);
       }
     });
-  
+  */
     var url = "https://burcindagistan.com/faultlines.github.io/data/faylar.kml";
   
     var gridLayer = new google.maps.KmlLayer(
