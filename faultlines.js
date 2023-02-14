@@ -33,19 +33,7 @@ function initMap() {
   }
 
   drawLine(0);
-  /*
-  // Load the grid KML data
-  var kmlLayer = new google.maps.KmlLayer({
-    url: "https://burcindagistan.com/faultlines.github.io/grid.kml",
-    map: map,
-  });
-  
-  // Add KML layer overlay to the map
-  var kmlLayer = new google.maps.KmlLayer({
-    url: 'https://burcindagistan.com/faultlines.github.io/faults_kml.kml',
-    preserveViewport: true,
-  });
-  kmlLayer.setMap(map);*/
+
   
   var url = "https://burcindagistan.com/faultlines.github.io/grid.kml";
   
