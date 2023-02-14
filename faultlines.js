@@ -6,7 +6,7 @@ function initMap() {
     center: { lat: 38.9637, lng: 35.2433 },
   });
 
-    var url = "./data/faylar.kml";
+    var url = "data/faylar.kml";
   
     var gridLayer = new google.maps.KmlLayer(
     {
