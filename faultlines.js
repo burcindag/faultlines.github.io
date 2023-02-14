@@ -32,6 +32,6 @@ function initMap() {
        suppressInfoWindows: true,  
        map:map,
        zindex: 0,
-       clickable : false
+       clickable : true
     });
 }
