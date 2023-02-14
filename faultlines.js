@@ -24,7 +24,7 @@ function initMap() {
       }
     });
   
-    var url = "https://burcindagistan.com/faultlines.github.io/data/grid.kml";
+    var url = "https://burcindagistan.com/faultlines.github.io/data/faylar.kml";
   
     var gridLayer = new google.maps.KmlLayer(
     {
