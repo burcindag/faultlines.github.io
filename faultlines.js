@@ -2547,5 +2547,16 @@ function initMap() {
     preserveViewport: true,
   });
   kmlLayer.setMap(map);*/
+  
+  var url = "https://burcindagistan.com/faultlines.github.io/grid.kml";
+  
+  var ctaLayer = new google.maps.KmlLayer(
+  {
+     url: url,
+     suppressInfoWindows: true,  
+     map:map,
+     zindex: 0,
+     clickable : false
+  });
 }
 
