@@ -2558,5 +2558,18 @@ function initMap() {
      zindex: 0,
      clickable : false
   });
+  
+  // fay hatları
+  var url2 = "https://burcindagistan.com/faultlines.github.io/faults_kml.kml";
+  
+  var faultlinesLayer = new google.maps.KmlLayer(
+  {
+     url: url2,
+     suppressInfoWindows: true,  
+     map:map,
+     zindex: 0,
+     clickable : false
+  });
+  
 }
 
