@@ -2550,7 +2550,7 @@ function initMap() {
   
   var url = "https://burcindagistan.com/faultlines.github.io/grid.kml";
   
-  var ctaLayer = new google.maps.KmlLayer(
+  var gridLayer = new google.maps.KmlLayer(
   {
      url: url,
      suppressInfoWindows: true,  
@@ -2567,7 +2567,7 @@ function initMap() {
      url: url2,
      suppressInfoWindows: true,  
      map:map,
-     zindex: 0,
+     zindex: 1,
      clickable : false
   });
   
