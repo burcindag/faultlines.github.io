@@ -59,6 +59,12 @@ function initMap() {
 
     drawLine(index + 1);
   }
+  
+  // Load the grid KML data
+  var kmlLayer = new google.maps.KmlLayer({
+    url: "https://burcindagistan.com/faultlines.github.io/grid.kml",
+    map: map,
+  });
 
   drawLine(0);
 }
