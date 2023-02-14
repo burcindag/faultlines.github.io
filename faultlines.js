@@ -54,7 +54,7 @@ function initMap() {
      url: urlF,
      suppressInfoWindows: true,  
      map:map,
-     zindex: 0,
+     zindex: 10,
      clickable : false
   });
   
