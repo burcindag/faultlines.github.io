@@ -21,7 +21,7 @@ function myLocation() {
   // Create a new map centered on your current location
   navigator.geolocation.getCurrentPosition(function(position) {
     var myLocation = {lat: position.coords.latitude, lng: position.coords.longitude};
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = google.maps.Map(document.getElementById('map'), {
       center: myLocation,
       zoom: 15
     });
@@ -31,15 +31,4 @@ function myLocation() {
       map: map
     });
   });
-  
-   var url = "https://burcindagistan.com/faultlines.github.io/data/faultlines.kml";
-  
-    var faultlinesLayer = new google.maps.KmlLayer(
-    {
-       url: url,
-       suppressInfoWindows: true,  
-       map:map,
-       zindex: 0,
-       clickable : true
-    });
 }
