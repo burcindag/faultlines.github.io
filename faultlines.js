@@ -21,7 +21,7 @@ function myLocation() {
   // Create a new map centered on your current location
   navigator.geolocation.getCurrentPosition(function(position) {
     var myLocation = {lat: position.coords.latitude, lng: position.coords.longitude};
-    map = google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
       center: myLocation,
       zoom: 15
     });
