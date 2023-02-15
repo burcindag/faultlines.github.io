@@ -1,5 +1,5 @@
 #map {
-  height: 400px;
+  height: 300px;
   width: 100%;
 }
 
@@ -29,7 +29,7 @@ h1 {
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   padding: 24px;
-  width: 500px;
+  width: 600px;
   max-width: 90%;
 }
 
