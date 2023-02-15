@@ -54,7 +54,11 @@ button:hover {
   background-color: #3e8e41;
 }
 
-@media (max-width: 600px) {
+/* Responsive layout - makes the button full-width on small screens */
+@media screen and (max-width: 600px) {
+  button {
+    width: 100%;
+  }
   .card {
     width: 100%;
   }
