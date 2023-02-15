@@ -21,14 +21,16 @@ function myLocation() {
   // Create a new map centered on your current location
   navigator.geolocation.getCurrentPosition(function(position) {
     var myLocation = {lat: position.coords.latitude, lng: position.coords.longitude};
-    map = new google.maps.Map(document.getElementById('map'), {
+    /*map = new google.maps.Map(document.getElementById('map'), {
       center: myLocation,
       zoom: 15
-    });
+    });*/
     // Add a marker at your current location
     var marker = new google.maps.Marker({
       position: myLocation,
-      map: map
+      map: map,
     });
+    map.setCenter(myLocation);
+    map.setZoom(15);
   });
 }
