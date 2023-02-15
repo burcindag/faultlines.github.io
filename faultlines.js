@@ -33,5 +33,11 @@ function myLocation() {
     });
     map.setCenter(myLocation);
     map.setZoom(15);
+  }, function (error) {
+      alert(error.code + ": " + error.message);
+  }, {
+      enableHighAccuracy: true,
+      maximumAge: 10000,
+      timeout: 5000
   });
 }
