@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2">
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:globalmapper="https://www.bluemarblegeo.com/globalmapper">
   <Document>
     <name>AVM</name>
-    <Style id="poly-000000-1200-77-normal">
+    <Style id="poly-000000-1200-77">
       <LineStyle>
-        <color>ff000000</color>
+        <color>FF004DF4</color>
         <width>1.2</width>
       </LineStyle>
       <PolyStyle>
@@ -13,27 +13,6 @@
         <outline>1</outline>
       </PolyStyle>
     </Style>
-    <Style id="poly-000000-1200-77-highlight">
-      <LineStyle>
-        <color>ff000000</color>
-        <width>1.8</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>4d000000</color>
-        <fill>1</fill>
-        <outline>1</outline>
-      </PolyStyle>
-    </Style>
-    <StyleMap id="poly-000000-1200-77">
-      <Pair>
-        <key>normal</key>
-        <styleUrl>#poly-000000-1200-77-normal</styleUrl>
-      </Pair>
-      <Pair>
-        <key>highlight</key>
-        <styleUrl>#poly-000000-1200-77-highlight</styleUrl>
-      </Pair>
-    </StyleMap>
     <Placemark>
       <name>Kentpark</name>
       <description>Kentpark AVM</description>
