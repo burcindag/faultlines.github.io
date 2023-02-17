@@ -34,7 +34,8 @@ function myLocation() {
     map.setCenter(myLocation);
     map.setZoom(15);
   }, function (error) {
-      alert(error.code + ": " + error.message);
+      //alert(error.code + ": " + error.message);
+      alert("Konum paylaşımı için izin gerekli!");
   }, {
       enableHighAccuracy: true,
       maximumAge: 10000,
