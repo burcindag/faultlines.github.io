@@ -14,7 +14,7 @@ async function initMap() {
 
     // KmlLayer yerine GeoJSON kullanmak 2026 standartıdır
     // Eğer verin hala KML ise, bir kereliğine GeoJSON'a çevirip sitene yükle
-    map.data.loadGeoJson("data/faultlines.json");
+    map.data.loadGeoJson("data/faultlines.geojson");
 
     // Stil verme (Fay hatlarını kırmızı yapalım)
     map.data.setStyle({
