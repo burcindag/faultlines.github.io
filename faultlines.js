@@ -1,66 +1,51 @@
-var map;
-var userMarker;
+let map;
+let userMarker;
 
-function initMap() {
-    // Türkiye merkezli başlangıç
-    const centerTurkey = { lat: 38.9637, lng: 35.2433 };
-    
-    map = new google.maps.Map(document.getElementById('map'), {
+async function initMap() {
+    // Gerekli kütüphaneleri yükle
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+    map = new Map(document.getElementById("map"), {
         zoom: 6,
-        center: centerTurkey,
-        streetViewControl: false,
-        mapId: "FAULTLINE_MAP_ID", // Google Cloud üzerinden stil tanımlamak için
-        mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-        }
+        center: { lat: 38.9637, lng: 35.2433 },
+        mapId: "DEMO_MAP_ID", // Modern markerlar için gereklidir
     });
 
-    // KML Katmanı - Burçin Dağıstan domaini üzerinden çekiliyor
-    const url = "https://burcindagistan.com/faultlines.github.io/data/faultlines.kml";
-    
-    const faultlinesLayer = new google.maps.KmlLayer({
-        url: url,
-        suppressInfoWindows: false, // Bilgi pencereleri fay hattı detayları için açık kalabilir
-        map: map,
-        preserveViewport: true
+    // KmlLayer yerine GeoJSON kullanmak 2026 standartıdır
+    // Eğer verin hala KML ise, bir kereliğine GeoJSON'a çevirip sitene yükle
+    map.data.loadGeoJson("data/faultlines.json");
+
+    // Stil verme (Fay hatlarını kırmızı yapalım)
+    map.data.setStyle({
+        strokeColor: "red",
+        strokeWeight: 2
     });
 }
 
+// Sayfa yüklendiğinde başlat
+initMap();
+
 function myLocation() {
-    const btn = document.getElementById('locationBtn');
-    
-    if (!navigator.geolocation) {
-        alert("Tarayıcınız konum özelliğini desteklemiyor.");
-        return;
-    }
-
-    btn.innerText = "Konum Alınıyor...";
-
-    navigator.geolocation.getCurrentPosition(
-        (position) => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
             const pos = {
                 lat: position.coords.latitude,
-                lng: position.coords.longitude
+                lng: position.coords.longitude,
             };
 
-            // Mevcut bir işaretçi varsa kaldır
-            if (userMarker) userMarker.setMap(null);
+            if (userMarker) userMarker.map = null;
 
-            // Modern Advanced Marker
             userMarker = new google.maps.marker.AdvancedMarkerElement({
                 position: pos,
                 map: map,
-                title: "Buradasınız"
+                title: "Konumunuz"
             });
 
-            map.panTo(pos);
-            map.setZoom(12);
-            btn.innerHTML = '<span class="icon">📍</span> Konumumu Bul';
-        },
-        (error) => {
-            alert("Konum izni reddedildi veya ulaşılamıyor.");
-            btn.innerHTML = '<span class="icon">📍</span> Konumumu Bul';
-        },
-        { enableHighAccuracy: true, timeout: 5000 }
-    );
+            map.setCenter(pos);
+            map.setZoom(14);
+        }, () => {
+            alert("Konum izni alınamadı.");
+        });
+    }
 }
