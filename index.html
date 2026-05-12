@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Türkiye Fay Hatları Haritası</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&v=beta&libraries=marker"></script>
+    <script src="faultlines.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="initMap()">
+    <div class="container">
+        <div class="card">
+            <h2>Türkiye Fay Hatları Haritası</h2>
+            <div id="map"></div>
+            
+            <div class="controls">
+                <button onclick="myLocation()" id="locationBtn">
+                    <span class="icon">📍</span> Konumumu Bul
+                </button>
+            </div>
+
+            <div class="disclaimer">
+                <p><strong>Yasal Uyarı:</strong> Teknik çalışmalarda referans olarak kullanımlardan doğacak sorumluluk tarafımıza ait değildir.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #2e7d32;
+    --warning-red: #d32f2f;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e0e0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 2rem;
+    width: 800px;
+    max-width: 100%;
+}
+
+#map {
+    height: 450px; /* Daha geniş bir görüş alanı */
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.disclaimer strong {
+    color: var(--warning-red);
+}
+
+@media (max-width: 600px) {
+    #map { height: 350px; }
+    .card { padding: 1rem; }
+    button { width: 100%; justify-content: center; }
+}
